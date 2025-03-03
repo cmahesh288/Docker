@@ -18,11 +18,3 @@ spec:
         - name: docker-project
           image: docker-project:latest
           imagePullPolicy: IfNotPresent
-          volumeMounts:
-            - name: data-volume
-              mountPath: /home/data
-      volumes:
-        - name: data-volume
-          hostPath:
-            path: /path/to/host/data
-            type: Directory
