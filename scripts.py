@@ -59,6 +59,7 @@ try:
     ip_address = get_ip_address()
     
     with open(result_path, 'w', encoding='utf-8') as f:
+        print("Writing into result.txt")
         f.write("Word count analysis results:\n\n")
         f.write(f"a. Word count in IF-1.txt: {if_word_count}\n")
         f.write(f"   Word count in AlwaysRememberUsThisWay-1.txt: {lady_gaga_word_count}\n\n")
@@ -72,7 +73,9 @@ try:
             f.write(f"   '{word}': {count} occurrences\n")
         f.write("\n")
         f.write(f"e. IP address of the machine: {ip_address}\n")
-    
+        print("Completed writing into the file")
+
+
     with open(result_path, 'r', encoding='utf-8') as f:
         print(f.read())
 
